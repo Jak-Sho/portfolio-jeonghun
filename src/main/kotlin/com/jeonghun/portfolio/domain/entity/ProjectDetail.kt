@@ -3,7 +3,7 @@ package com.jeonghun.portfolio.domain.entity
 import jakarta.persistence.*
 
 @Entity
-abstract class ProjectDetail(content:String,
+class ProjectDetail(content:String,
                              isActive: Boolean,
                              url:String?
 ): BaseEntity() {

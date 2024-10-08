@@ -19,7 +19,7 @@ class Project(
     @Column(name = "Project_id")
     var id: Long? = null
 
-    override var name:String = name
+    var name:String = name
 
     var description:String = description
 

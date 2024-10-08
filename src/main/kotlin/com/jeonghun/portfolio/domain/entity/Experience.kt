@@ -3,7 +3,7 @@ package com.jeonghun.portfolio.domain.entity
 import jakarta.persistence.*
 
 @Entity
-abstract class Experience(title:String,
+class Experience(title:String,
                           description:String,
                           startYear:Int,
                           startMonth:Int,
