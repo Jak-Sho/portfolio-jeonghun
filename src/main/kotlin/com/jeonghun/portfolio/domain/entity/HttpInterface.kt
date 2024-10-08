@@ -5,7 +5,7 @@ import jakarta.servlet.http.HttpServlet
 import jakarta.servlet.http.HttpServletRequest
 
 @Entity
-class HttpInterface(httpServletRequest: HttpServletRequest): BaseEntity() {
+abstract class HttpInterface(httpServletRequest: HttpServletRequest): BaseEntity() {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,7 +16,7 @@ class HttpInterface(httpServletRequest: HttpServletRequest): BaseEntity() {
         ?.map{"${it.name}:${it.value}"}
         ?.toString()
 
-    var referer: String? = httpServletRequest.getHeader(name:"referer")
+    var referer: String? = httpServletRequest.getHeader("referer")
 
             var localAddr: String? = httpServletRequest.localAddr
 
@@ -24,5 +24,5 @@ class HttpInterface(httpServletRequest: HttpServletRequest): BaseEntity() {
 
     var requestUri: String? = httpServletRequest.requestURI
 
-    var userAgent: String? = httpServletRequest.getHeader(name:"user-agent")
+    var userAgent: String? = httpServletRequest.getHeader("user-agent")
 }
