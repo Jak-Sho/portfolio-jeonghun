@@ -9,7 +9,7 @@ import java.time.LocalDate
 
 @Entity
 
-class Achievement(
+abstract class Achievement(
     title:String,
     description:String,
     achievedDate: LocalDate?,

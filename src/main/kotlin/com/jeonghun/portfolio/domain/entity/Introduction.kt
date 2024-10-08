@@ -3,7 +3,7 @@ package com.jeonghun.portfolio.domain.entity
 import jakarta.persistence.*
 
 @Entity
-class Introduction(
+abstract class Introduction(
     content:String,
     isActive: Boolean
 

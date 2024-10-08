@@ -15,7 +15,7 @@ class Link(
     @Column(name = "Link_id")
     var id: Long? = null
 
-    var name: String = name
+    override var name: String = name
 
     var content: String = content
 
